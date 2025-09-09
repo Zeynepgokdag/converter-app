@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+    <h1 style="color: azure; text-align: center; font-size:50px;">CONVERTER APP</h1>
+    
+    
 
-    <h1>Converter App</h1>
-    <h2>Category</h2>
 </head>
+
 <body>
+    <div id="converter_choices">
+      <select name="kategori" id="kategori" onchange="setSelectionValue(this)">
+        <option value="kutle">Kütle</option>
+         <option value="uzunluk">Uzunluk</option>
+          <option value="sicaklık">Sıcaklık</option>
+          <option value="hacim">Hacim</option></select>
+          
+        </div>
+
+    
+   
+
+     <script src="app.js"></script>
 </body>
 </html>

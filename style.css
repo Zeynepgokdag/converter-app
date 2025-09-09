@@ -1,0 +1,31 @@
+
+body{
+    background-color: #779977;
+}
+
+
+select {
+  padding: 8px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+select:hover {
+  color: rgb(116, 239, 63);
+  background-color: #f0f8ff;
+}
+
+#hacim{
+    display: none;
+}
+#sicaklik{
+    display: none;
+}
+#uzunluk{
+    display: none;
+}
+#kutle{
+    display: block;
+}
