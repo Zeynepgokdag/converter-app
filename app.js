@@ -1,40 +1,29 @@
-function setSelectionValue(newValue)
-{
-const dropdown=document.getElementById("kategori");
-const value=dropdown.value;
+const options = {
+  weight: ["Kilogram", "Gram", "Pound"],
+  length: ["Metre", "Santimetre", "Feet", "Inç"],
+  temperature: ["°C", "°F", "K"],
+  volume: ["Litre", "Mililitre", "Galon"],
+};
 
+function setSelectionValue(secilenelement) {
+  const firstoption = document.getElementById("firstoption");
+  const secondoption = document.getElementById("secondoption");
 
-if(value=="kutle"){
+  firstoption.innerHTML = "";
+  secondoption.innerHTML = "";
 
-    document.getElementById("kutle").style.display="block";
-    document.getElementById("uzunluk").style.display="none";
-    document.getElementById("sicaklik").style.display="none";
-    document.getElementById("hacim").style.display="none";
-   
+  const selectedValues = options[secilenelement.value];
+
+  selectedValues.forEach((element) => {
+    const option1 = document.createElement("option");
+    option1.value = element;
+    option1.innerText = element;
+
+    const option2 = document.createElement("option");
+    option2.value = element;
+    option2.innerText = element;
+
+    firstoption.appendChild(option1);
+    secondoption.appendChild(option2);
+  });
 }
-
-else if(value=="uzunluk"){
-    document.getElementById("kutle").style.display="none";
-    document.getElementById("uzunluk").style.display="block";
-    document.getElementById("sicaklik").style.display="none";
-    document.getElementById("hacim").style.display="none";
-
-}
-
-else if(value=="sicaklik"){
-    document.getElementById("kutle").style.display="none";
-    document.getElementById("uzunluk").style.display="none";
-    document.getElementById("sicaklik").style.display="block";
-    document.getElementById("hacim").style.display="none";
-
-}
-
-else if(value=="hacim"){
-    document.getElementById("kutle").style.display="none";
-    document.getElementById("uzunluk").style.display="none";
-    document.getElementById("sicaklik").style.display="none";
-    document.getElementById("hacim").style.display="block";
-
-}
-}
-

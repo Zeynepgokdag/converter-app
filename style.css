@@ -1,12 +1,26 @@
-
-body{
-    background-color: #779977;
+body {
+  height: 100dvh;
+  width: 100dvw;
+  margin: 0 !important;
+  background-color: #779977;
 }
 
+h1 {
+  color: #ffffff;
+  font-size: xx-large;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
 
 select {
   padding: 8px;
-  border: 2px solid gray;
+  border: 3px solid rgb(4, 4, 4);
   border-radius: 5px;
   background-color: white;
   transition: 0.3s;
@@ -17,15 +31,142 @@ select:hover {
   background-color: #f0f8ff;
 }
 
-#hacim{
-    display: none;
+#volume {
+  display: none;
 }
-#sicaklik{
-    display: none;
+#temperature {
+  display: none;
 }
-#uzunluk{
-    display: none;
+#length {
+  display: none;
 }
-#kutle{
-    display: block;
+#weight {
+  display: block;
+  justify-items: center;
+  justify-self: center;
+}
+#weight select {
+  display: flex;
+  justify-items: center;
+  justify-self: center;
+}
+
+#length select {
+  display: flex;
+  justify-items: center;
+  justify-self: center;
+}
+
+#temperature select {
+  display: flex;
+  justify-items: center;
+  justify-self: center;
+}
+
+#volume select {
+  display: flex;
+  justify-items: center;
+  justify-self: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#converter_choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weightmenusu {
+  background-color: #184e18;
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#weight_text {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  justify-self: center;
+  border: 3px solid rgb(0, 0, 0);
+  height: 30px;
+}
+
+.uzunlukmenusu {
+  background-color: #184e18;
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#uzunluk_text {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  justify-self: center;
+  border: 3px solid rgb(0, 0, 0);
+  height: 30px;
+}
+
+.sicaklikmenusu {
+  background-color: #184e18;
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#sicaklik_text {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  justify-self: center;
+  border: 3px solid rgb(0, 0, 0);
+  height: 30px;
+}
+
+.hacimmenusu {
+  background-color: #184e18;
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#hacim_text {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  justify-self: center;
+  border: 3px solid rgb(0, 0, 0);
+  height: 30px;
+}
+
+#weightsecimi2 {
+  margin-top: 20px;
+}
+
+#sicakliksecimi2 {
+  margin-top: 20px;
+}
+#hacimsecimi2 {
+  margin-top: 20px;
+}
+#uzunluksecimi2 {
+  margin-top: 20px;
 }

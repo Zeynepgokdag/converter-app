@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-   <link rel="stylesheet" href="style.css">
-    <h1 style="color: azure; text-align: center; font-size:50px;">CONVERTER APP</h1>
-    
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
+  <body>
+    <div class="container">
+      <h1>CONVERTER APP</h1>
+      <div id="converter_choices">
+        <select
+          name="kategori"
+          id="kategori"
+          onchange="setSelectionValue(this)"
+        > 
+          <option value="weight">WEIGHT</option>
+          <option value="length">LENGTH</option>
+          <option value="temperature">TEMPERATURE</option>
+          <option value="volume">VOLUME</option>
+        </select>
+      </div>
+         
+      <div class="input_text">
+        
+        <input type="text" id="input1" name="input1"><br><br>
+         <input type="text" id="input2" name="input2"><br><br>
+      </div>
+      <div class="menu">
+         
 
-<body>
-    <div id="converter_choices">
-      <select name="kategori" id="kategori" onchange="setSelectionValue(this)">
-        <option value="kutle">Kütle</option>
-         <option value="uzunluk">Uzunluk</option>
-          <option value="sicaklık">Sıcaklık</option>
-          <option value="hacim">Hacim</option></select>
-          
-        </div>
-
-    
+          <select name="firstoption" id="firstoption"></select>
+         <select name="secondoption" id="secondoption"></select>
+           
+      </div>
    
-
-     <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
