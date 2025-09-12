@@ -10,32 +10,42 @@
   <body>
     <div class="container">
       <h1>CONVERTER APP</h1>
+
       <div id="converter_choices">
         <select
-          name="kategori"
-          id="kategori"
+          name="category"
+          id="category"
           onchange="setSelectionValue(this)"
-        > 
+        >
           <option value="weight">WEIGHT</option>
           <option value="length">LENGTH</option>
           <option value="temperature">TEMPERATURE</option>
           <option value="volume">VOLUME</option>
         </select>
       </div>
-         
+
       <div class="input_text">
-        
-        <input type="text" id="input1" name="input1"><br><br>
-         <input type="text" id="input2" name="input2"><br><br>
+        <input
+          type="number"
+          id="input1"
+          name="input1"
+          placeholder="Değer giriniz"
+          step="any"
+        /><br /><br />
+        <input
+          type="number"
+          id="input2"
+          name="input2"
+          placeholder="Sonuç"
+          readonly
+        /><br /><br />
       </div>
       <div class="menu">
-         
-
-          <select name="firstoption" id="firstoption"></select>
-         <select name="secondoption" id="secondoption"></select>
-           
+        <select name="firstoption" id="firstoption"></select>
+        <select name="secondoption" id="secondoption"></select>
       </div>
-   
-    <script src="app.js"></script>
+    </div>
   </body>
+  <script src="calculation.js"></script>
+  <script src="app.js"></script>
 </html>
