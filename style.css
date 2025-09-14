@@ -2,81 +2,111 @@ body {
   height: 100dvh;
   width: 100dvw;
   margin: 0 !important;
-  background-color: #779977;
+  background: linear-gradient(135deg, #232526, #414345); /* siyah-gri degrade */
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
+/* Başlık */
 h1 {
-  color: #ffffff;
-  font-size: xx-large;
+  color: #ff4b8b;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(255, 75, 139, 0.8);
+  margin-bottom: 25px;
+  animation: fadeDown 1.2s ease;
 }
 
+/* Ana kutu */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08); /* glass */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  max-width: 420px;
+  width: 90%;
+  animation: fadeUp 1.5s ease;
 }
 
-select {
-  padding: 8px;
-  border: 3px solid rgb(4, 4, 4);
-  border-radius: 5px;
-  background-color: white;
-  transition: 0.3s;
+/* Input ve Select */
+select,
+input {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 10px 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.9);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-select:hover {
-  color: rgb(116, 239, 63);
-  background-color: #f0f8ff;
+/* Hover Efekti */
+select:hover,
+input:hover {
+  border: 2px solid #ff4b8b;
+  background: rgba(40, 40, 40, 1);
+  box-shadow: 0 0 15px #ff4b8b, 0 0 30px rgba(255, 75, 139, 0.6);
+  transform: translateY(-3px);
 }
 
-#volume {
-  display: none;
-}
-#temperature {
-  display: none;
-}
-#length {
-  display: none;
-}
-#weight {
-  display: block;
-  justify-items: center;
-  justify-self: center;
-}
-#weight select {
-  display: flex;
-  justify-items: center;
-  justify-self: center;
+/* Sonuç inputu */
+input[readonly] {
+  background-color: rgba(60, 60, 60, 0.9);
+  font-weight: bold;
+  color: #ff4b8b;
+  text-align: center;
 }
 
-#length select {
-  display: flex;
-  justify-items: center;
-  justify-self: center;
-}
-
-#temperature select {
-  display: flex;
-  justify-items: center;
-  justify-self: center;
-}
-
-#volume select {
-  display: flex;
-  justify-items: center;
-  justify-self: center;
-}
-
+/* Menü */
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 #converter_choices {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Animasyonlar */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
