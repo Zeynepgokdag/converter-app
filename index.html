@@ -14,7 +14,7 @@
     />
   </head>
 
-  <body onload="setSelectionValue(category)">
+  <body>
     <div class="container">
       <h1>CONVERTER APP</h1>
 
@@ -38,6 +38,7 @@
           name="input1"
           placeholder="Değer giriniz"
           step="any"
+          onKeyDown="inputChecker(event)"
         />
         <select name="firstoption" id="firstoption"></select>
       </div>

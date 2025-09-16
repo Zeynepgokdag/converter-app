@@ -5,12 +5,26 @@ const options = {
   volume: ["L", "mL", "gal"],
 };
 
+function inputChecker(event) {
+  const from = document.getElementById("firstoption").value;
+  const input1 = document.getElementById("input1").value;
+
+  if (from == "K" && event.key == "-") {
+    event.preventDefault();
+  } else if (input1.length > 0 && event.key == "-") {
+    event.preventDefault();
+  }
+}
+
 function setSelectionValue(secilenelement) {
   const firstoption = document.getElementById("firstoption");
   const secondoption = document.getElementById("secondoption");
 
   firstoption.innerHTML = "";
   secondoption.innerHTML = "";
+
+  document.getElementById("input1").value = "";
+  document.getElementById("input2").value = "";
 
   const selectedValues = options[secilenelement.value];
 
@@ -29,17 +43,19 @@ function setSelectionValue(secilenelement) {
 
   filterOptions();
 }
+/*function kWithİnputClear() {
+  const firstoption = document.getElementById("firstoption");
+
+  if (firstoption.options.value === "K") {
+    document.getElementById("input1").value = "";
+  }
+}*/
 
 // (-) seçilmesin regex
 const input1 = document.getElementById("input1");
 
 input1.addEventListener("input", function () {
   const from = document.getElementById("firstoption").value;
-
-  if (from === "K") {
-    this.value = this.value.replace(/-/g, "");
-  }
-
   convertValue();
 });
 
@@ -104,6 +120,7 @@ function filterOptions() {
 // değişim butonu
 document.getElementById("swapBtn").addEventListener("click", () => {
   const firstoption = document.getElementById("firstoption");
+  document.getElementById("input1").value = "";
   const secondoption = document.getElementById("secondoption");
 
   const temp = firstoption.value;

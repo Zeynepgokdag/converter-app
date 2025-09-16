@@ -67,6 +67,12 @@ input:hover {
   transform: translateY(-3px);
 }
 
+#firstoption,
+#secondoption {
+  width: 150px;
+  max-width: 150px;
+  min-width: 150px;
+}
 input[readonly] {
   background-color: rgba(60, 60, 60, 0.9);
   font-weight: bold;
