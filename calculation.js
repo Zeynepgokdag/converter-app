@@ -1,70 +1,70 @@
 const calculation = [
   //Ağırlık//
   {
-    from_key: "Kilogram",
-    to_key: "Gram",
+    from_key: "kg",
+    to_key: "g",
     coefficient: (value) => {
       return value * 1000;
     },
   },
   {
-    from_key: "Kilogram",
-    to_key: "Pound",
+    from_key: "kg",
+    to_key: "lb",
     coefficient: (value) => {
       return value * 2.2;
     },
   },
 
   {
-    from_key: "Gram",
-    to_key: "Kilogram",
+    from_key: "g",
+    to_key: "kg",
     coefficient: (value) => {
       return value * 0.001;
     },
   },
 
   {
-    from_key: "Gram",
-    to_key: "Pound",
+    from_key: "g",
+    to_key: "lb",
     coefficient: (value) => {
       return value * 0.00220462262;
     },
   },
 
   {
-    from_key: "Pound",
-    to_key: "Gram",
+    from_key: "lb",
+    to_key: "g",
     coefficient: (value) => {
       return value * 453.59237;
     },
   },
 
   {
-    from_key: "Pound",
-    to_key: "Kilogram",
+    from_key: "lb",
+    to_key: "kg",
     coefficient: (value) => {
       return value * 0.45359237;
     },
   },
   //Uzunluk//
   {
-    from_key: "Metre",
-    to_key: "Santimetre",
+    from_key: "m",
+    to_key: "cm",
     coefficient: (value) => {
       return value * 100;
     },
   },
 
   {
-    from_key: "Metre",
-    to_key: "Feet",
+    from_key: "m",
+    to_key: "ft",
     coefficient: (value) => {
       return value * 3.2808399;
     },
   },
 
   {
-    from_key: "Metre",
+    from_key: "m",
     to_key: "Inç",
     coefficient: (value) => {
       return value * 39.3700787;
@@ -72,45 +72,45 @@ const calculation = [
   },
 
   {
-    from_key: "Santimetre",
-    to_key: "Metre",
+    from_key: "cm",
+    to_key: "m",
     coefficient: (value) => {
       return value * 0.01;
     },
   },
 
   {
-    from_key: "Santimetre",
-    to_key: "Feet",
+    from_key: "cm",
+    to_key: "ft",
     coefficient: (value) => {
       return value * 0.0328084;
     },
   },
 
   {
-    from_key: "Santimetre",
+    from_key: "cm",
     to_key: "Inç",
     coefficient: (value) => {
       return value * 0.393700787;
     },
   },
   {
-    from_key: "Feet",
-    to_key: "Metre",
+    from_key: "ft",
+    to_key: "m",
     coefficient: (value) => {
       return value * 0.3048;
     },
   },
 
   {
-    from_key: "Feet",
-    to_key: "Santimetre",
+    from_key: "ft",
+    to_key: "cm",
     coefficient: (value) => {
       return value * 30.48;
     },
   },
   {
-    from_key: "Feet",
+    from_key: "ft",
     to_key: "Inç",
     coefficient: (value) => {
       return value * 12;
@@ -119,66 +119,66 @@ const calculation = [
 
   {
     from_key: "Inç",
-    to_key: "Metre",
+    to_key: "m",
     coefficient: (value) => {
       return value * 0.0254;
     },
   },
   {
     from_key: "Inç",
-    to_key: "Santimetre",
+    to_key: "cm",
     coefficient: (value) => {
       return value * 2.54;
     },
   },
   {
     from_key: "Inç",
-    to_key: "Feet",
+    to_key: "ft",
     coefficient: (value) => {
       return value * 0.0833;
     },
   },
   //Hacim//
   {
-    from_key: "Litre",
-    to_key: "Mililitre",
+    from_key: "L",
+    to_key: "mL",
     coefficient: (value) => {
       return value * 1000;
     },
   },
   {
-    from_key: "Litre",
-    to_key: "Galon",
+    from_key: "L",
+    to_key: "gal",
     coefficient: (value) => {
       return value * 0.264172052;
     },
   },
 
   {
-    from_key: "Mİlilitre",
-    to_key: "Litre",
+    from_key: "mL",
+    to_key: "L",
     coefficient: (value) => {
       return value * 0.001;
     },
   },
   {
     from_key: "Mİlilitre",
-    to_key: "Galon",
+    to_key: "gal",
     coefficient: (value) => {
       return value * 0.000264172052;
     },
   },
 
   {
-    from_key: "Galon",
-    to_key: "Litre",
+    from_key: "gal",
+    to_key: "L",
     coefficient: (value) => {
       return value * 3.78541178;
     },
   },
   {
-    from_key: "Galon",
-    to_key: "Mililitre",
+    from_key: "gal",
+    to_key: "mL",
     coefficient: (value) => {
       return value * 3785.41178;
     },
@@ -203,6 +203,7 @@ const calculation = [
   {
     from_key: "°F",
     to_key: "°C",
+
     coefficient: (value) => {
       return ((value - 32) * 5) / 9;
     },

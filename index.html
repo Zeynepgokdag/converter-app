@@ -3,11 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Converter App</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEyp4ETJQEZ1+cG8lY9lrZ9+8xwYl8a9+JQmA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
-  <body>
+  <body onload="setSelectionValue(category)">
     <div class="container">
       <h1>CONVERTER APP</h1>
 
@@ -24,24 +31,29 @@
         </select>
       </div>
 
-      <div class="input_text">
+      <div class="input_group">
         <input
           type="number"
           id="input1"
           name="input1"
           placeholder="Değer giriniz"
           step="any"
-        /><br /><br />
+        />
+        <select name="firstoption" id="firstoption"></select>
+      </div>
+
+      <div class="swap-container">
+        <button id="swapBtn"><i class="fas fa-retweet">🗘</i></button>
+      </div>
+
+      <div class="input_group">
         <input
           type="number"
           id="input2"
           name="input2"
           placeholder="Sonuç"
           readonly
-        /><br /><br />
-      </div>
-      <div class="menu">
-        <select name="firstoption" id="firstoption"></select>
+        />
         <select name="secondoption" id="secondoption"></select>
       </div>
     </div>

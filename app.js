@@ -1,10 +1,8 @@
-//import { calculation } from "./calculation";//
-
 const options = {
-  weight: ["Kilogram", "Gram", "Pound"],
-  length: ["Metre", "Santimetre", "Feet", "Inç"],
+  weight: ["kg", "g", "lb"],
+  length: ["m", "cm", "ft", "Inç"],
   temperature: ["°C", "°F", "K"],
-  volume: ["Litre", "Mililitre", "Galon"],
+  volume: ["L", "mL", "gal"],
 };
 
 function setSelectionValue(secilenelement) {
@@ -28,12 +26,28 @@ function setSelectionValue(secilenelement) {
     firstoption.appendChild(option1);
     secondoption.appendChild(option2);
   });
+
+  filterOptions();
 }
 
-//input1 alma
-document.getElementById("input1").addEventListener("input", convertValue);
-//birimsecme
-document.getElementById("firstoption").addEventListener("change", convertValue);
+// (-) seçilmesin regex
+const input1 = document.getElementById("input1");
+
+input1.addEventListener("input", function () {
+  const from = document.getElementById("firstoption").value;
+
+  if (from === "K") {
+    this.value = this.value.replace(/-/g, "");
+  }
+
+  convertValue();
+});
+
+// birim seçme
+document.getElementById("firstoption").addEventListener("change", () => {
+  filterOptions();
+  convertValue();
+});
 document
   .getElementById("secondoption")
   .addEventListener("change", convertValue);
@@ -51,7 +65,7 @@ function convertValue() {
   }
 
   if (from === to) {
-    input2.value = value;
+    input2.value = null;
     return;
   }
 
@@ -65,3 +79,36 @@ function convertValue() {
     input2.value = "Çeviri yok";
   }
 }
+
+//aynı birimi engelle
+function filterOptions() {
+  const firstValue = document.getElementById("firstoption").value;
+  const secondoption = document.getElementById("secondoption");
+
+  for (let i = 0; i < secondoption.options.length; i++) {
+    const option = secondoption.options[i];
+    option.disabled = option.value === firstValue;
+  }
+
+  // ikinci select aynı birim
+  if (secondoption.value === firstValue) {
+    for (let i = 0; i < secondoption.options.length; i++) {
+      if (!secondoption.options[i].disabled) {
+        secondoption.value = secondoption.options[i].value;
+        break;
+      }
+    }
+  }
+}
+
+// değişim butonu
+document.getElementById("swapBtn").addEventListener("click", () => {
+  const firstoption = document.getElementById("firstoption");
+  const secondoption = document.getElementById("secondoption");
+
+  const temp = firstoption.value;
+  firstoption.value = secondoption.value;
+  secondoption.value = temp;
+
+  convertValue();
+});
